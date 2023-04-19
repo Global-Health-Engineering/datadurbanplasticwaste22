@@ -8,3 +8,5 @@ inst/doc
 /Meta/
 
 # docs
+
+R/helper.R
