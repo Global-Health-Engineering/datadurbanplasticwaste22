@@ -175,3 +175,32 @@ litterboom_counts |>
 
 Data are available as
 [CC-BY](https://github.com/Global-Health-Engineering/durbanplasticwaste/blob/main/LICENSE.md).
+
+## Citation
+
+To cite this package, please use:
+
+``` r
+citation("durbanplasticwaste")
+#> 
+#> Bergen R, Schöbitz L, Meyer-Piening C, Boynton L, Tilley E, Kalina M,
+#> Rakgabale S, Luvuno SN (2023). "durbanplasticwaste. Durban (South
+#> Aftica) Plastic Waste Data." doi: 10.5281/zenodo.7825679 (URL:
+#> https://doi.org/10.5281/zenodo.7825679), <URL:
+#> https://global-health-engineering.github.io/durbanplasticwaste/>.
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Misc{R-durbanplasticwaste,
+#>     title = {durbanplasticwaste. Durban (South Aftica) Plastic Waste Data},
+#>     author = {Raúl Bergen and Lars Schöbitz and Chiara Meyer-Piening and Lin Boynton and Elizabeth Tilley and Marc Kalina and Siphiwe Rakgabale and Sfiso Nduduzo Luvuno},
+#>     doi = {10.5281/zenodo.7825679},
+#>     url = {https://global-health-engineering.github.io/durbanplasticwaste/},
+#>     abstract = {Waste characterisation data for extended producer responsibility.
+#>     The plastic waste was collected in the uMngeni River system in Durban, 
+#>     South Africa, and categorised by brand, corporate group, application, and 
+#>     type of plastic.},
+#>     version = {0.1.1},
+#>     year = {2023},
+#>   }
+```

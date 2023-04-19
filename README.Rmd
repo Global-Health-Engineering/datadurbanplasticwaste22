@@ -224,3 +224,11 @@ litterboom_counts |>
     
 Data are available as [CC-BY](https://github.com/Global-Health-Engineering/durbanplasticwaste/blob/main/LICENSE.md).
     
+## Citation
+
+To cite this package, please use:
+
+```{r}
+citation("durbanplasticwaste")
+```
+
