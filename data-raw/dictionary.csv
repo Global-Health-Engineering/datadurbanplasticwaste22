@@ -10,6 +10,6 @@ data, litterboom_weights.rda, date, date, Date of the collected litterboom sampl
 data, litterboom_weights.rda, location, character,  Descriptive name of the sample location.
 data, litterboom_weights.rda, pet, numeric, Weight (in kg) of PET items.
 data, litterboom_weights.rda, hpde_pp, numeric, Weight (in kg) of PET items.
-data, locations.rda, location, Descriptive name of the sample location.
-data, locations.rda, latitude, Latitude coordinate.
-data, locations.rda, longitude, Longitude coordinate.
+data, locations.rda, location, character, Descriptive name of the sample location.
+data, locations.rda, latitude, numeric, Latitude coordinate.
+data, locations.rda, longitude, numeric, Longitude coordinate.
