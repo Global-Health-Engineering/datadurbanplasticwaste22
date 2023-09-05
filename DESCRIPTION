@@ -41,6 +41,11 @@ Authors@R: c(
            family = "Luvuno",
            email = "sfisonduduzo.luvuno@gmail.com",
            role = c("ctb")), 
+    person(given = "Sebastian Camilo",
+           family = "Loos",
+           email = "sloos@ethz.ch",
+           role = c("ctb"),
+           comment = c(ORCID = "0000-0002-8830-1734")),
     person(given = "Global Health Engineering", 
            role = c("fnd"))
            )

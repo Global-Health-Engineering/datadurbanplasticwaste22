@@ -2,6 +2,8 @@
 output: github_document
 editor_options: 
   chunk_output_type: console
+  markdown: 
+    wrap: 72
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -24,28 +26,31 @@ library(leaflet)
 # durbanplasticwaste
 
 <!-- badges: start -->
+
 [![DOI](https://zenodo.org/badge/604573987.svg)](https://zenodo.org/badge/latestdoi/604573987)
 [![R-CMD-check](https://github.com/Global-Health-Engineering/durbanplasticwaste/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Global-Health-Engineering/durbanplasticwaste/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
 
 # Overview
 
-This packages combines data collected as part of an MSc. Thesis Project and an 
-MSc. Semester Project conducted in Durban, South Africa. The projects were 
-supported by the Global Health Engineering group at ETH Zurich, Switzerland.
+This packages combines data collected as part of an MSc. Thesis Project
+and an MSc. Semester Project conducted in Durban, South Africa. The
+projects were supported by the Global Health Engineering group at ETH
+Zurich, Switzerland.
 
 # Installation
 
-You can install the development version of durbanplasticwaste 
-from [GitHub](https://github.com/) with:
+You can install the development version of durbanplasticwaste from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("Global-Health-Engineering/durbanplasticwaste")
 ```
 
-Alternatively, you can download the individual datasets as a CSV or XLSX file 
-from the table below.
+Alternatively, you can download the individual datasets as a CSV or XLSX
+file from the table below.
 
 ```{r, echo=FALSE}
 
@@ -67,34 +72,34 @@ read_csv("data-raw/dictionary.csv") |>
 
 ## MSc. Thesis Project
 
-Evaluating the potential of Extended Producer Responsibility returns for a small
-local waste collection company through a brand audit of riverine plastic waste 
-in Durban, South Africa.
+Evaluating the potential of Extended Producer Responsibility returns for
+a small local waste collection company through a brand audit of riverine
+plastic waste in Durban, South Africa.
 
 ### Description
 
-This Master's Thesis Project focuses on determining the growth 
-opportunities for a small-sized plastic recycling enterprise in light 
-of the shift from a voluntary to a mandatory Extended Producer
-Responsibility (EPR) policy in South Africa. 
+This Master's Thesis Project focuses on determining the growth
+opportunities for a small-sized plastic recycling enterprise in light of
+the shift from a voluntary to a mandatory Extended Producer
+Responsibility (EPR) policy in South Africa.
 
-To achieve this goal in  the context of a small start-up in Durban, South Africa
-, a brand audit is conducted to identify the top brands that can be targeted for 
-financing or partnership opportunities. The company, called 
-[TRI ECO Tours](https://triecotours.co.za/), is a small tourism and waste 
-collection startup in Durban operated by Siphiwe Rakgabale.
+To achieve this goal in the context of a small start-up in Durban, South
+Africa , a brand audit is conducted to identify the top brands that can
+be targeted for financing or partnership opportunities. The company,
+called [TRI ECO Tours](https://triecotours.co.za/), is a small tourism
+and waste collection startup in Durban operated by Siphiwe Rakgabale.
 
 ### Research Question
 
 What is the characterization by type, application, and brand of plastic
 waste collected in the uMngeni River system in Durban, South Africa?
 
-### Data 
+### Data
 
-The data was collected throughout two months in Durban, South Africa right 
-before the rainy season. The collection took place in 6 different litterboom 
-locations throughout Durban. The data gathered was the audit of the occurence 
-of the brands washed into the litterbooms. 
+The data was collected throughout two months in Durban, South Africa
+right before the rainy season. The collection took place in 6 different
+litterboom locations throughout Durban. The data gathered was the audit
+of the occurence of the brands washed into the litterbooms.
 
 The package provides access to three data sets.
 
@@ -110,7 +115,6 @@ The `litterboom_counts` data set has {ncol(litterboom_counts)} variables and {nr
 ```{r, eval=FALSE}
 litterboom_counts
 ```
-
 
 ```{r, echo=FALSE}
 readr::read_csv("data-raw/dictionary.csv") |> 
@@ -145,7 +149,9 @@ readr::read_csv("data-raw/dictionary.csv") |>
 
 ```
 
-Locations data as a map illustrating the six litterboom sampling locations in Durban, South Africa. For an interactive map and other code examples, see `vignette("examples")`.
+Locations data as a map illustrating the six litterboom sampling
+locations in Durban, South Africa. For an interactive map and other code
+examples, see `vignette("examples")`.
 
 ```{r, echo=FALSE}
 
@@ -178,21 +184,32 @@ sampling_locations |>
 knitr::include_graphics("man/figures/map-litterboom-sampling-locations.png")
 ```
 
-
 ## MSc. Semester Project
 
-Examination of non-recycled marine plastic litter in order to identify recycling and beneficiation pathways in Durban, South Africa
+Examination of non-recycled marine plastic litter in order to identify
+recycling and beneficiation pathways in Durban, South Africa
 
 ### Description
 
-This Semester Thesis Project focuses on determining the distribution of plastic litter on the Durban beachfront in order to identify key targets for policy and financial support through the South African EPR policy to reduce plastic spills into the environment and promote higher recycling rates.
+This Semester Thesis Project focuses on determining the distribution of
+plastic litter on the Durban beachfront in order to identify key targets
+for policy and financial support through the South African EPR policy to
+reduce plastic spills into the environment and promote higher recycling
+rates.
+
 Research Question
 
-What types and amounts of plastic are found along the beachfront in the mangroves of Durban-North, South Africa?
+What types and amounts of plastic are found along the beachfront in the
+mangroves of Durban-North, South Africa?
 
 ### Data
 
-
+The data was collected in collaboration with a local team that provided
+the waste for the study. Two different approaches were used to clean up
+the waste. One to collect the waste floating on the river, preventing it
+from reaching the sea and one to collect waste washed ashore at the
+beaches. Three locations along the rivers close to settlements and one
+at the beach in Durban North.
 
 ## Examples
 
@@ -219,11 +236,12 @@ litterboom_counts |>
   knitr::kable(digits = 0)
 
 ```
-  
+
 ## License
-    
-Data are available as [CC-BY](https://github.com/Global-Health-Engineering/durbanplasticwaste/blob/main/LICENSE.md).
-    
+
+Data are available as
+[CC-BY](https://github.com/Global-Health-Engineering/durbanplasticwaste/blob/main/LICENSE.md).
+
 ## Citation
 
 To cite this package, please use:
@@ -231,4 +249,3 @@ To cite this package, please use:
 ```{r}
 citation("durbanplasticwaste")
 ```
-

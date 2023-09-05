@@ -283,7 +283,7 @@
 <span></span>
 <span><span class="va">litterboom_counts</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">group</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>group <span class="op">=</span> <span class="fu">fct_lump</span><span class="op">(</span><span class="va">group</span>, n <span class="op">=</span> <span class="fl">10</span>, other_level <span class="op">=</span> <span class="st">"OTHER"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>group <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_lump.html" class="external-link">fct_lump</a></span><span class="op">(</span><span class="va">group</span>, n <span class="op">=</span> <span class="fl">10</span>, other_level <span class="op">=</span> <span class="st">"OTHER"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">group</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html" class="external-link">summarise</a></span><span class="op">(</span></span>
 <span>    count <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">count</span><span class="op">)</span></span>
@@ -417,6 +417,7 @@
 <li>Marc Kalina <br><small class="roles"> Contributor </small> <a href="https://orcid.org/0000-0002-6335-3845" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>Siphiwe Rakgabale <br><small class="roles"> Contributor </small> <a href="https://orcid.org/0009-0007-3253-6327" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>Sfiso Nduduzo Luvuno <br><small class="roles"> Contributor </small>  </li>
+<li>Sebastian Camilo Loos <br><small class="roles"> Contributor </small> <a href="https://orcid.org/0000-0002-8830-1734" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>Thanks all!</li>
 <li><a href="authors.html">More about authors...</a></li>
 </ul>

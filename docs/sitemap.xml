@@ -4,9 +4,6 @@
     <loc>https://global-health-engineering.github.io/durbanplasticwaste/404.html</loc>
   </url>
   <url>
-    <loc>https://global-health-engineering.github.io/durbanplasticwaste/LICENSE.html</loc>
-  </url>
-  <url>
     <loc>https://global-health-engineering.github.io/durbanplasticwaste/articles/articles/examples.html</loc>
   </url>
   <url>
@@ -22,6 +19,9 @@
     <loc>https://global-health-engineering.github.io/durbanplasticwaste/index.html</loc>
   </url>
   <url>
+    <loc>https://global-health-engineering.github.io/durbanplasticwaste/LICENSE.html</loc>
+  </url>
+  <url>
     <loc>https://global-health-engineering.github.io/durbanplasticwaste/reference/durbanplasticwaste-package.html</loc>
   </url>
   <url>
@@ -35,5 +35,8 @@
   </url>
   <url>
     <loc>https://global-health-engineering.github.io/durbanplasticwaste/reference/locations.html</loc>
+  </url>
+  <url>
+    <loc>https://global-health-engineering.github.io/durbanplasticwaste/reference/plastic_types.html</loc>
   </url>
 </urlset>
