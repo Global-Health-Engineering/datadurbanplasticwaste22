@@ -211,6 +211,50 @@ from reaching the sea and one to collect waste washed ashore at the
 beaches. Three locations along the rivers close to settlements and one
 at the beach in Durban North.
 
+The package provides access to one data set of this project.
+
+```{r}
+library(durbanplasticwaste)
+```
+
+```{epoxy}
+The `plastic_types` data set has {ncol(plastic_types)} variables and {nrow(plastic_types)} observations. {nrow(filter(plastic_types, beach & place != "Beach Total"))} observations were made on the beach which were added together in the row that has "Beach Total" as the value for the variable "place". One observation was done at a litterboom. For an overview of the variable names, see the following table.
+
+```
+
+```{r, eval=FALSE}
+plastic_types
+```
+
+```{r, echo=FALSE}
+readr::read_csv("data-raw/dictionary.csv") |>
+  dplyr::filter(file_name == "plastic_types.rda") |>
+  dplyr::select(variable_name:description) |>
+  knitr::kable()
+```
+
+The following plot is showing the distribution of the waste weight for different plastic and waste types at the Beachwood Mangrove across the sampling period (September 19th 2022 - October 17th 2022) in percent.
+
+```{r stacked-area-chart, echo=FALSE}
+plastic_types |> 
+  filter(place == "Beachwood Mangrove") |> 
+  rename(footwear = shoes) |>
+  pivot_longer(cols = c(pet:pp, ps:footwear), names_to = "group", values_to = "value") |>
+  replace_na(list(value = 0)) |> 
+  group_by(date, group) |> 
+  summarise(n = sum(value)) |> 
+  mutate(percentage = n / sum(n)) |> 
+  ggplot(aes(x=date, y=percentage*100, fill=group)) +
+  geom_area(alpha=0.6 , size=0.6, colour="white") +
+  scale_fill_viridis_d(name = "Waste type",
+                       labels = c("Footwear", "Glass", "Other Plastics", "Other Waste",
+                                  "PE", "PET", "PP", "PS")) +
+  theme_bw() + 
+  labs(title = "Distribution of waste types (in % of total weight) at Beachwood Mangrove.",
+       x = "Date of sampling in 2022",
+       y = "Percentage of total waste weight.")
+```
+
 ## Examples
 
 ```{epoxy}

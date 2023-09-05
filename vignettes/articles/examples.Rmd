@@ -15,8 +15,7 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(durbanplasticwaste)
-library(ggplot2)
-library(dplyr)
+library(tidyverse)
 library(leaflet)
 ```
 
@@ -42,6 +41,30 @@ litterboom_counts |>
 
 
 ```
+
+The following Graph is showing the distribution of the different plastic and waste types for the sampling time (September 19th 2022 - Oktober 17th 2022) in kg.
+
+```{r stacked area chart}
+plastic_types |> 
+  # filter for Beachwood Mangrove
+  filter(place == "Beachwood Mangrove") |> 
+  rename(footwear = shoes) |>
+  # select variables including weight in kg (excluding shoes)
+  # pivot longer to create a stacked area plot
+  pivot_longer(cols = c(pet:pp, ps:glass), names_to = "group", values_to = "value") |> 
+  # fix NA values
+  replace_na(list(value = 0)) |>
+  # plot stacked area chart
+  ggplot(mapping = aes(x=date, y=value, fill=group)) + 
+  geom_area(alpha=0.6 , size=0.6, colour="white") +
+  scale_fill_viridis_d(name = "Waste type",
+                       labels = c("Footwear", "Glass", "Other Plastics", "Other Waste",
+                                  "PE", "PET", "PP", "PS")) +
+  labs(title = "Distribution of the different waste types (in kg) at the Beachwood Mangrove.",
+       x = "Date of sampling in 2022",
+       y = "Weight (kg)") +
+  theme_bw()
+```  
 
 # Prepare a map
 
