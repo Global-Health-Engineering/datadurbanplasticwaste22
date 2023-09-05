@@ -1,17 +1,31 @@
-directory,file_name,variable_name,variable_type,description
-data/,types.rda,date,double,Collection date of the data
-data/,types.rda,place,character,Place where the collection was done
-data/,types.rda,total,double,Total amount of waste chategorized in kg.
-data/,types.rda,pet,double,Amount of polyethylene terephthalate (PET) in kg.
-data/,types.rda,pe,double,Amount of polyethylene (PE) in kg. During the sorting process HDPE and LDPE plastics were not distinguished.
-data/,types.rda,pp,double,Amount of polypropylene (PP) in kg.
-data/,types.rda,ps,double,Amount of polystyrene (PS) in kg.
-NA,NA,hdpe_pp,double,Amount of high-density polyethylene (HDPE) and polypropylene (PP) combined weight in kg. During the sorting process these two plastics were not distinguished.
-data/,types.rda,other_plastics,double,Amount of other plastics in kg. The category ‘Other plastics’ included plastics that couldn’t be identified by the scanner or plastics that are in such small amounts the weighing scale could not distinguish it.
-data/,types.rda,other_waste,double,Amount of other waste in kg remaining at the end of the categorization.
-data/,types.rda,glass,double,Amount of glass in kg.
-data/,types.rda,shoes,double,Amount of shoes in kg.
-data/,types.rda,shoes_quantity,double,Number of shoes found at the location. Surprisingly a lot of shoes were found. As they often consisted of a combination of different plastics then a separate category was made for shoes.
-data/,types.rda,bag_quantity,double,Number of bags that where collected.
-data/,types.rda,beach,logical,Categorical variable showing whether the collection was done at the beach (TRUE) or at the a litterboom (FALSE).
-data/,types.rda,details,character,Additional information about the sampled data.
+directory, file_name, variable_name, variable_type, description
+data, litterboom_counts.rda, date, date, Date of the collected litterboom sample.
+data, litterboom_counts.rda, location, character,  Descriptive name of the sample location. See [`locations`] for longitude and latitude.
+data, litterboom_counts.rda, brand, character, Brand name of the collected item (e.g. Coca Cola).
+data, litterboom_counts.rda, group, character, Group name that owns the brand (e.g. Coca Cola Beverages South Africa).
+data, litterboom_counts.rda, plastic, character, Type of plastic of the item (identified plastic types are PET; HDPE; and PP. HDPE and PP were categorised together as HDPE/PP.
+data, litterboom_counts.rda, category, character, Categorisation of waste into 15 product type categories (e.g. Alcohol; Milk; Tobacco; Water).
+data, litterboom_counts.rda, count, numeric, Number of counted items.
+data, litterboom_weights.rda, date, date, Date of the collected litterboom sample.
+data, litterboom_weights.rda, location, character,  Descriptive name of the sample location.
+data, litterboom_weights.rda, pet, numeric, Weight (in kg) of PET items.
+data, litterboom_weights.rda, hpde_pp, numeric, Weight (in kg) of PET items.
+data, locations.rda, location, character, Descriptive name of the sample location.
+data, locations.rda, latitude, numeric, Latitude coordinate.
+data, locations.rda, longitude, numeric, Longitude coordinate.
+data,plastic_types.rda,date,date,Collection date of the data.
+data,plastic_types.rda,place,character,Place where the collection was done.
+data,plastic_types.rda,total,double,Total amount of waste chategorized in kg.
+data,plastic_types.rda,pet,double,Amount of polyethylene terephthalate (PET) in kg.
+data,plastic_types.rda,pe,double,Amount of polyethylene (PE) in kg. During the sorting process HDPE and LDPE plastics were not distinguished.
+data,plastic_types.rda,pp,double,Amount of polypropylene (PP) in kg.
+data,plastic_types.rda,ps,double,Amount of polystyrene (PS) in kg.
+data,plastic_types.rda,hdpe_pp,double,Amount of high-density polyethylene (HDPE) and polypropylene (PP) combined weight in kg. During the sorting process these two plastics were not distinguished.
+data,plastic_types.rda,other_plastics,double,Amount of other plastics in kg. The category ‘Other plastics’ included plastics that couldn’t be identified by the scanner or plastics that are in such small amounts the weighing scale could not distinguish it.
+data,plastic_types.rda,other_waste,double,Amount of other waste in kg remaining at the end of the categorization.
+data,plastic_types.rda,glass,double,Amount of glass in kg.
+data,plastic_types.rda,shoes,double,Amount of shoes in kg.
+data,plastic_types.rda,shoes_quantity,double,Number of shoes found at the location. Surprisingly a lot of shoes were found. As they often consisted of a combination of different plastics then a separate category was made for shoes.
+data,plastic_types.rda,bag_quantity,double,Number of bags that where collected.
+data,plastic_types.rda,beach,logical,Categorical variable showing whether the collection was done at the beach (TRUE) or at the a litterboom (FALSE).
+data,plastic_types.rda,details,character,Additional information about the sampled data.
