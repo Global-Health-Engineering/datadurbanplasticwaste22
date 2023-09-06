@@ -45,8 +45,8 @@ authors:
 - family-names: Luvuno
   given-names: Sfiso Nduduzo
   email: sfisonduduzo.luvuno@gmail.com
-- family-names: Sebastian Camilo
-  given-names: Loos
+- family-names: Loos
+  given-names: Sebastian Camilo
   email: sloos@ethz.ch
   orcid: https://orcid.org/0000-0002-8830-1734
 - name: Global Health Engineering
@@ -85,15 +85,16 @@ preferred-citation:
   - family-names: Luvuno
     given-names: Sfiso Nduduzo
     email: sfisonduduzo.luvuno@gmail.com
-  - family-names: Sebastian Camilo
-    given-names: Loos
+  - family-names: Loos
+    given-names: Sebastian Camilo
     email: sloos@ethz.ch
     orcid: https://orcid.org/0000-0002-8830-1734
   doi: 10.5281/zenodo.7845779
   url: https://global-health-engineering.github.io/durbanplasticwaste/
-  abstract: Waste characterisation data for extended producer responsibility. The
-    plastic waste was collected in the uMngeni River system in Durban, South Africa,
-    and categorised by brand, corporate group, application, and type of plastic.
+  abstract: Waste characterisation data for extended producer responsibility.
+            The plastic waste was collected in the uMngeni River system in
+            Durban, South Africa, and categorised by brand, corporate group,
+            application, and type of plastic.
   version: 0.1.1
   year: '2023'
 url: https://global-health-engineering.github.io/durbanplasticwaste/
@@ -102,71 +103,3 @@ contact:
   given-names: Lars
   email: lschoebitz@ethz.ch
   orcid: https://orcid.org/0000-0003-2196-5015
-references:
-- type: software
-  title: 'R: A Language and Environment for Statistical Computing'
-  notes: Depends
-  url: https://www.R-project.org/
-  authors:
-  - name: R Core Team
-  location:
-    name: Vienna, Austria
-  year: '2023'
-  institution:
-    name: R Foundation for Statistical Computing
-  version: '>= 2.10'
-- type: software
-  title: knitr
-  abstract: 'knitr: A General-Purpose Package for Dynamic Report Generation in R'
-  notes: Suggests
-  url: https://yihui.org/knitr/
-  repository: https://CRAN.R-project.org/package=knitr
-  authors:
-  - family-names: Xie
-    given-names: Yihui
-    email: xie@yihui.name
-    orcid: https://orcid.org/0000-0003-0645-5666
-  year: '2023'
-- type: software
-  title: rmarkdown
-  abstract: 'rmarkdown: Dynamic Documents for R'
-  notes: Suggests
-  url: https://pkgs.rstudio.com/rmarkdown/
-  repository: https://CRAN.R-project.org/package=rmarkdown
-  authors:
-  - family-names: Allaire
-    given-names: JJ
-    email: jj@posit.co
-  - family-names: Xie
-    given-names: Yihui
-    email: xie@yihui.name
-    orcid: https://orcid.org/0000-0003-0645-5666
-  - family-names: Dervieux
-    given-names: Christophe
-    email: cderv@posit.co
-    orcid: https://orcid.org/0000-0003-4474-2498
-  - family-names: McPherson
-    given-names: Jonathan
-    email: jonathan@posit.co
-  - family-names: Luraschi
-    given-names: Javier
-  - family-names: Ushey
-    given-names: Kevin
-    email: kevin@posit.co
-  - family-names: Atkins
-    given-names: Aron
-    email: aron@posit.co
-  - family-names: Wickham
-    given-names: Hadley
-    email: hadley@posit.co
-  - family-names: Cheng
-    given-names: Joe
-    email: joe@posit.co
-  - family-names: Chang
-    given-names: Winston
-    email: winston@posit.co
-  - family-names: Iannone
-    given-names: Richard
-    email: rich@posit.co
-    orcid: https://orcid.org/0000-0003-3925-190X
-  year: '2023'

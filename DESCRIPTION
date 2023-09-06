@@ -50,9 +50,9 @@ Authors@R: c(
            role = c("fnd"))
            )
 Description: Waste characterisation data for extended producer responsibility.
-    The plastic waste was collected in the uMngeni River system in Durban, 
-    South Africa, and categorised by brand, corporate group, application, and 
-    type of plastic.
+             The plastic waste was collected in the uMngeni River system in
+             Durban, South Africa, and categorised by brand, corporate group,
+             application, and type of plastic.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

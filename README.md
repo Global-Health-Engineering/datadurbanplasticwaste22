@@ -237,8 +237,9 @@ citation("durbanplasticwaste")
 #> Um Paket 'durbanplasticwaste' in Publikationen zu zitieren, nutzen Sie
 #> bitte:
 #> 
-#>   (2023). "durbanplasticwaste. Durban (South Aftica) Plastic Waste
-#>   Data." doi:10.5281/zenodo.7845779
+#>   Bergen R, Schöbitz L, Meyer-Piening C, Boynton L, Tilley E, Kalina M,
+#>   Rakgabale S, Luvuno S, Loos S (2023). "durbanplasticwaste. Durban
+#>   (South Aftica) Plastic Waste Data." doi:10.5281/zenodo.7845779
 #>   <https://doi.org/10.5281/zenodo.7845779>,
 #>   <https://global-health-engineering.github.io/durbanplasticwaste/>.
 #> 
@@ -246,6 +247,7 @@ citation("durbanplasticwaste")
 #> 
 #>   @Misc{R-durbanplasticwaste,
 #>     title = {durbanplasticwaste. Durban (South Aftica) Plastic Waste Data},
+#>     author = {Raúl Bergen and Lars Schöbitz and Chiara Meyer-Piening and Lin Boynton and Elizabeth Tilley and Marc Kalina and Siphiwe Rakgabale and Sfiso Nduduzo Luvuno and Sebastian Camilo Loos},
 #>     doi = {10.5281/zenodo.7845779},
 #>     url = {https://global-health-engineering.github.io/durbanplasticwaste/},
 #>     abstract = {Waste characterisation data for extended producer responsibility.
