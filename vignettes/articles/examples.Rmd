@@ -44,7 +44,7 @@ litterboom_counts |>
 
 The following Graph is showing the distribution of the different plastic and waste types for the sampling time (September 19th 2022 - Oktober 17th 2022) in kg.
 
-```{r stacked area chart}
+```{r stacked-area-chart}
 plastic_types |> 
   # filter for Beachwood Mangrove
   filter(place == "Beachwood Mangrove") |> 
