@@ -10,12 +10,12 @@
 
 <!-- badges: end -->
 
-# Overview
-
 This packages combines data collected as part of an MSc. Thesis Project
 and an MSc. Semester Project conducted in Durban, South Africa. The
 projects were supported by the Global Health Engineering group at ETH
 Zurich, Switzerland.
+
+<img src="man/figures/README-stacked-area-chart-1-1.png" width="100%" style="display: block; margin: auto;" />
 
 # Installation
 
@@ -116,7 +116,7 @@ Locations data as a map illustrating the six litterboom sampling
 locations in Durban, South Africa. For an interactive map and other code
 examples, see `vignette("examples")`.
 
-<img src="man/figures/map-litterboom-sampling-locations.png" width="100%" />
+<img src="man/figures/map-litterboom-sampling-locations.png" width="100%" style="display: block; margin: auto;" />
 
 ## MSc. Semester Project
 
@@ -184,7 +184,7 @@ The following plot is showing the distribution of the waste weight for
 different plastic and waste types at the Beachwood Mangrove across the
 sampling period (September 19th 2022 - October 17th 2022) in percent.
 
-<img src="man/figures/README-stacked-area-chart-1.png" width="100%" />
+<img src="man/figures/README-stacked-area-chart-2-1.png" width="100%" style="display: block; margin: auto;" />
 
 ## Examples
 
@@ -234,8 +234,7 @@ To cite this package, please use:
 
 ``` r
 citation("durbanplasticwaste")
-#> Um Paket 'durbanplasticwaste' in Publikationen zu zitieren, nutzen Sie
-#> bitte:
+#> To cite package 'durbanplasticwaste' in publications use:
 #> 
 #>   Bergen R, Schöbitz L, Meyer-Piening C, Boynton L, Tilley E, Kalina M,
 #>   Rakgabale S, Luvuno S, Loos S (2023). "durbanplasticwaste. Durban
@@ -243,7 +242,7 @@ citation("durbanplasticwaste")
 #>   <https://doi.org/10.5281/zenodo.7845779>,
 #>   <https://global-health-engineering.github.io/durbanplasticwaste/>.
 #> 
-#> Ein BibTeX-Eintrag für LaTeX-Benutzer ist
+#> A BibTeX entry for LaTeX users is
 #> 
 #>   @Misc{R-durbanplasticwaste,
 #>     title = {durbanplasticwaste. Durban (South Aftica) Plastic Waste Data},
@@ -252,8 +251,8 @@ citation("durbanplasticwaste")
 #>     url = {https://global-health-engineering.github.io/durbanplasticwaste/},
 #>     abstract = {Waste characterisation data for extended producer responsibility.
 #> The plastic waste was collected in the uMngeni River system in Durban,
-#> South Africa, and categorised by brand, corporate group, application, and
-#> type of plastic.},
+#> South Africa, and categorised by brand, corporate group,
+#> application, and type of plastic.},
 #>     version = {0.1.1},
 #>     year = {2023},
 #>   }

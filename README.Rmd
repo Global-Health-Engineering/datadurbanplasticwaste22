@@ -15,12 +15,15 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%",
   message = FALSE,
-  warning = FALSE
+  warning = FALSE,
+  fig.retina = 2,
+  fig.align = 'center'
 )
 
 library(tidyverse)
 library(epoxy)
 library(leaflet)
+library(durbanplasticwaste)
 ```
 
 # durbanplasticwaste
@@ -32,12 +35,43 @@ library(leaflet)
 
 <!-- badges: end -->
 
-# Overview
-
 This packages combines data collected as part of an MSc. Thesis Project
 and an MSc. Semester Project conducted in Durban, South Africa. The
 projects were supported by the Global Health Engineering group at ETH
 Zurich, Switzerland.
+
+```{r stacked-area-chart-1, echo=FALSE}
+plot_stacked_beachwood <- plastic_types |> 
+  filter(place == "Beachwood Mangrove") |> 
+  rename(footwear = shoes) |>
+  pivot_longer(cols = c(pet:pp, ps:footwear), names_to = "group", values_to = "value") |>
+  replace_na(list(value = 0)) |> 
+  group_by(date, group) |> 
+  summarise(n = sum(value)) |> 
+  mutate(percentage = n / sum(n)) |> 
+  mutate(date = as_date(date)) |> 
+  ggplot(aes(x = date, y = percentage * 100, fill = group)) +
+  geom_area(alpha = 0.6 ,linewidth = 0.6, colour = "white") +
+  scale_y_continuous(expand = c(0, 0, 0.05, 0)) +
+  scale_x_date(expand = c(0, 0, 0.05, 0)) +
+  scale_fill_viridis_d(name = "Waste type",
+                       labels = c("Footwear", "Glass", "Other Plastics", "Other Waste",
+                                  "PE", "PET", "PP", "PS")) +
+  labs(title = "Distribution of waste types (in kg)",
+       subtitle = "Beachwood Mangrove, Durban, South Africa", 
+       x = "Date of sampling in 2022",
+       y = "Weight (kg)") +
+  theme_gray() +
+  theme(panel.grid.minor = element_blank(),
+        panel.grid.major.x = element_blank(),
+        axis.line = element_line(),
+        panel.background = element_rect(fill = "white"),
+        panel.grid.major = element_line("grey95", linewidth = 0.25),
+        legend.key  = element_rect(fill = NA)) 
+
+plot_stacked_beachwood
+
+```
 
 # Installation
 
@@ -235,24 +269,10 @@ readr::read_csv("data-raw/dictionary.csv") |>
 
 The following plot is showing the distribution of the waste weight for different plastic and waste types at the Beachwood Mangrove across the sampling period (September 19th 2022 - October 17th 2022) in percent.
 
-```{r stacked-area-chart, echo=FALSE}
-plastic_types |> 
-  filter(place == "Beachwood Mangrove") |> 
-  rename(footwear = shoes) |>
-  pivot_longer(cols = c(pet:pp, ps:footwear), names_to = "group", values_to = "value") |>
-  replace_na(list(value = 0)) |> 
-  group_by(date, group) |> 
-  summarise(n = sum(value)) |> 
-  mutate(percentage = n / sum(n)) |> 
-  ggplot(aes(x=date, y=percentage*100, fill=group)) +
-  geom_area(alpha=0.6 , size=0.6, colour="white") +
-  scale_fill_viridis_d(name = "Waste type",
-                       labels = c("Footwear", "Glass", "Other Plastics", "Other Waste",
-                                  "PE", "PET", "PP", "PS")) +
-  theme_bw() + 
-  labs(title = "Distribution of waste types (in % of total weight) at Beachwood Mangrove.",
-       x = "Date of sampling in 2022",
-       y = "Percentage of total waste weight.")
+```{r stacked-area-chart-2, echo=FALSE}
+
+plot_stacked_beachwood
+
 ```
 
 ## Examples
