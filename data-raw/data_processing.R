@@ -13,6 +13,9 @@ library(janitor)
 
 litterboom <- read_excel("data-raw/Data for R_Raúl.xlsx", skip = 2)
 locations <- read_csv("data-raw/litterboom-sample-locations.csv")
+plastic_types <- read_excel("data-raw/Data for R_Chiara.xlsx",
+           range = "B9:N28",
+           col_types = c("date", "text", rep("numeric", 11)))
 
 # tidy data ---------------------------------------------------------------
 
@@ -88,16 +91,48 @@ locations <- locations |>
   pivot_wider(names_from = name,
               values_from = dd)
 
+## characterization data - separate "Place" and add additional
+## columns for categorization
+plastic_types <- plastic_types |>
+  drop_na(Total) |>
+  mutate(
+    Place = ifelse(is.na(Place), "Beach Total", Place), # Name Beach Total row
+    beach = !(str_detect(Place, "Litterboom")), # add variable to see if
+    details = case_when(
+      str_detect(Place, "^Litterboom") ~ "Litterboom",
+      str_detect(Place, "Beach Total") ~ "Beach Total"),
+    details = ifelse(is.na(details),
+                        str_remove_all(str_extract(Place, "\\[.*\\]"), "[\\[\\]]"),
+                        details),
+    # Place = str_remove(Place, " \\[.*\\]"),
+    Place = str_replace(Place, "\r\n", " "),
+    Place = case_when(
+      str_detect(Place, "ove Beachfront$") ~ "Beachfront Mangrove",
+      str_detect(Place, "^Beachwood Mangrove") ~ "Beachwood Mangrove",
+      TRUE ~ Place
+      )
+    ) |>
+  rename(shoes_quantity = "# of shoes",
+         bag_quantity = "# of bags",
+         other_plastics = "Other Plastics",
+         other_waste = "Other Waste") |>
+  rename_all(.funs = tolower) |>
+  mutate(hdpe_pp = if_else(place == "Litterboom Beachwood Mangroves",
+                           true = pe, false = NA), .after = pp,
+         pe = if_else(place == "Litterboom Beachwood Mangroves",
+                      true = NA, false = pe))
+
 # write data --------------------------------------------------------------
 
 usethis::use_data(litterboom_weights, litterboom_counts, locations, overwrite = TRUE)
+usethis::use_data(plastic_types, overwrite = TRUE)
 
 write_csv(litterboom_counts, here::here("inst", "extdata", "litterboom_counts.csv"))
 write_csv(litterboom_weights, here::here("inst", "extdata", "litterboom_weights.csv"))
 write_csv(locations, here::here("inst", "extdata", "locations.csv"))
+write_csv(plastic_types, here::here("inst", "extdata", "plastic_types.csv"))
 
 openxlsx::write.xlsx(litterboom_counts, here::here("inst", "extdata", "litterboom_counts.xlsx"))
 openxlsx::write.xlsx(litterboom_weights, here::here("inst", "extdata", "litterboom_weights.xlsx"))
 openxlsx::write.xlsx(locations, here::here("inst", "extdata", "locations.xlsx"))
-
-
+openxlsx::write.xlsx(plastic_types, here::here("inst", "extdata", "plastic_types.xlsx"))

@@ -1,8 +1,8 @@
 # -----------------------------------------------------------
-# CITATION file created with {cffr} R package, v0.4.1.9000
+# CITATION file created with {cffr} R package, v0.5.0
 # See also: https://docs.ropensci.org/cffr/
 # -----------------------------------------------------------
- 
+
 cff-version: 1.2.0
 message: 'To cite package "durbanplasticwaste" in publications use:'
 type: software
@@ -45,6 +45,10 @@ authors:
 - family-names: Luvuno
   given-names: Sfiso Nduduzo
   email: sfisonduduzo.luvuno@gmail.com
+- family-names: Loos
+  given-names: Sebastian Camilo
+  email: sloos@ethz.ch
+  orcid: https://orcid.org/0000-0002-8830-1734
 - name: Global Health Engineering
 preferred-citation:
   type: generic
@@ -81,11 +85,16 @@ preferred-citation:
   - family-names: Luvuno
     given-names: Sfiso Nduduzo
     email: sfisonduduzo.luvuno@gmail.com
+  - family-names: Loos
+    given-names: Sebastian Camilo
+    email: sloos@ethz.ch
+    orcid: https://orcid.org/0000-0002-8830-1734
   doi: 10.5281/zenodo.7845779
   url: https://global-health-engineering.github.io/durbanplasticwaste/
-  abstract: Waste characterisation data for extended producer responsibility. The
-    plastic waste was collected in the uMngeni River system in Durban, South Africa,
-    and categorised by brand, corporate group, application, and type of plastic.
+  abstract: Waste characterisation data for extended producer responsibility.
+            The plastic waste was collected in the uMngeni River system in
+            Durban, South Africa, and categorised by brand, corporate group,
+            application, and type of plastic.
   version: 0.1.1
   year: '2023'
 url: https://global-health-engineering.github.io/durbanplasticwaste/

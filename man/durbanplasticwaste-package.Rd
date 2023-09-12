@@ -31,6 +31,7 @@ Other contributors:
   \item Marc Kalina \email{mkalina@ethz.ch} (\href{https://orcid.org/0000-0002-6335-3845}{ORCID}) [contributor]
   \item Siphiwe Rakgabale \email{siphiwerakgabale@gmail.com} (\href{https://orcid.org/0009-0007-3253-6327}{ORCID}) [contributor]
   \item Sfiso Nduduzo Luvuno \email{sfisonduduzo.luvuno@gmail.com} [contributor]
+  \item Sebastian Camilo Loos \email{sloos@ethz.ch} (\href{https://orcid.org/0000-0002-8830-1734}{ORCID}) [contributor]
   \item Global Health Engineering [funder]
 }
 
